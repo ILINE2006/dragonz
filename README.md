@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header, section, footer {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+header {
+    background: #364959;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo span {
+    color: #ff4b1f;
+}
+
+header nav a[href="#smart-home"]:hover {
+    text-shadow: 
+        2px 2px 0 #DA4A4A,      
+        1px 1px 0 #DA4A4A;    
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main {
+    padding-top: 80px;
+}
+
+
+#about, #subscribe {
+    padding: 100px 0;
+}
+
+#about {
+    background: #364959;
+    color: white;
+}
+
+#smart-home {
+    background: #e9e9e9;
+    padding: 100px 0;
+}
+
+
+#about .container,
+#smart-home .container,
+#subscribe .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about .text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about img {
+    width: 100%;
+}
+
+
+.smart-home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.smart-home article {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.smart-home .img {
+    height: 200px;
+}
+
+.smart-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+     margin-top: auto;
+    border-left: 2px solid #364959;
+    border-right: 2px solid #364959;
+    border-bottom: 2px solid #364959;
+}
+
+
+.bottom a {
+    background: #364959;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+   .subscribe-form {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;              
+}
+
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+
+
+
+form .email {
+    margin-left: 0px;    
+    margin-right: 0px;   
+}
+
+
+form .fio {
+    margin-left: 50px;   
+    margin-right: 100px; 
+}
+
+
+form .social {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+form .login {
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+
+form .password {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+input {
+    height: 45px;
+    padding: 10px;
+    border: 2px solid #364959;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #ff4b1f;
+    box-shadow: 0 0 5px rgba(255, 75, 31, 0.3);
+}
+
+
+button {
+    padding: 15px 50px;
+    background: #364959;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ff4b1f;
+    transform: scale(1.05);
+}
+
+
+
+
+
+footer {
+    background: #364959;
+    color: white;
+    padding: 60px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contacts-and-social {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.map img {
+    width: 100%;
+}
+
+
+
+footer > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-top: 30px;
+}
+
+footer > div:last-child p {
+    font-weight: 800;
+}
+
+
+/* ========================================
+   ГЛОБАЛЬНЫЕ СЕЛЕКТОРЫ
+   ======================================== */
+/* .container {}              /* Обёртка контента: центрирование, max-width, padding */ */
+/* .container h2 {}           /* Заголовки секций: цвет #FFFFFF, размер шрифта, отступы */ */
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+/* header {}                  /* Фон хедера, padding, возможно blur-эффект */ */
+/* header .container {}       /* Flex-контейнер для логотипа и навигации */ */
+
+/* header .logo {}            /* Блок логотипа: отступы, выравнивание */ */
+/* header .logo a {}          /* Ссылка логотипа: убрано подчёркивание, цвет текста */ */
+/* header .logo h1 {}         /* Текст логотипа: размер, вес шрифта, цвет #FFFFFF */ */
+/* header .logo h1 span {}    /* Буква "Z": акцентный цвет #DA4A4A, возможно градиент */ */
+
+/* header nav {}              /* Навигация: flex, gap, выравнивание по правой стороне */ */
+/* header nav a {}            /* Ссылки меню: цвет #FFFFFF, padding, hover-эффекты */ */
+/* header nav a:hover {}      /* При наведении: тень #2D4B72, смена цвета, cursor: pointer */ */
+
+
+/* ========================================
+   СЕКЦИЯ «О НАС» (#about)
+   ======================================== */
+/* #about {}                  /* Секция: padding, фон (возможно градиент) */ */
+/* #about .container {}       /* Внутренние отступы, центрирование */ */
+/* #about h2 {}               /* Заголовок секции: цвет, размер, отступ снизу */ */
+
+/* .about {}                  /* Flex-контейнер: расположение .text и .img в ряд/колонку */ */
+/* .about .text {}            /* Текстовая колонка: ширина, цвет текста #FFFFFF */ */
+/* .about .text h3 {}         /* Подзаголовок: размер, вес, цвет #FFFFFF или акцент */ */
+/* .about .text p {}          /* Параграф: line-height, цвет #CCCCCC, отступы */ */
+
+/* .about .img {}             /* Контейнер изображения: border-radius: 20px, overflow: hidden */ */
+/* .about .img img {}         /* Само изображение: width: 100%, object-fit: cover, transition */ */
+/* .about .img img:hover {}   /* Hover: тень #2D4B72, лёгкое увеличение scale(1.02) */ */
+
+
+/* ========================================
+   СЕКЦИЯ «УМНЫЙ ДОМ» (#smart-home)
+   ======================================== */
+/* #smart-home {}             /* Секция: padding, фон #101018 или градиент */ */
+/* #smart-home .container {}  /* Центрирование, max-width */ */
+/* #smart-home h2 {}          /* Заголовок: цвет #FFFFFF, margin-bottom */ */
+
+/* .smart-home {}             /* Grid/Flex-контейнер для карточек: gap, justify-content */ */
+
+/* === КАЖДАЯ КАРТОЧКА === */
+/* .smart-home article {}                    /* Карточка: border-radius: 14-20px, фон #16202D или градиент #101018→#19314C, padding, transition */ */
+/* .smart-home article:hover {}              /* Hover: тень #092A56 или #2D4B72, cursor: pointer, transform: translateY(-4px) */ */
+
+/* .smart-home article h3 {}                 /* Заголовок товара: цвет #FFFFFF, font-size, margin-bottom */ */
+
+/* .smart-home article .img {}               /* Контейнер фото: border-radius: 14px 14px 0 0, overflow: hidden, height: 200px */ */
+/* .smart-home article .img img {}           /* Фото: width: 100%, height: 100%, object-fit: cover, display: block */ */
+/* .smart-home article .img img:hover {}     /* Опционально: лёгкое увеличение или фильтр */ */
+
+/* .smart-home article p {}                  /* Описание: цвет #CCCCCC, line-height, margin: 16px 0 */ */
+
+/* .smart-home article .bottom {}            /* Нижний блок: flex, justify-content: space-between, align-items: center, padding-top, border-top (опционально) */ */
+
+/* .smart-home article .bottom span {}       /* Цена: цвет #FFFFFF или #DA4A4A, font-weight: bold, font-size: 1.1rem */ */
+/* .smart-home article .bottom a {}          /* Кнопка "Купить": border-radius: 10px/50px, фон #2D4B72, цвет текста #FFFFFF, padding, text-decoration: none, transition */ */
+/* .smart-home article .bottom a:hover {}    /* Hover: фон #DA4A4A или тень #2D4B72, transform: scale(1.05) */ */
+/* .smart-home article .bottom a:active {}   /* Активное состояние: фон темнее, например #1a2a4a */ */
+
+
+/* ========================================
+   СЕКЦИЯ «ПОДПИСАТЬСЯ» (#subscribe)
+   ======================================== */
+/* #subscribe {}              /* Секция: padding, фон #19314C или градиент */ */
+/* #subscribe .container {}   /* Центрирование */ */
+/* #subscribe h2 {}           /* Заголовок: цвет #FFFFFF, отступы */ */
+
+/* .subscribe-form {}         /* Обёртка формы: max-width, margin: 0 auto, фон #16202D, border-radius: 20px, padding */ */
+
+/* .subscribe-form form {}    /* Flex-контейнер: flex-direction: column, gap: 16px */ */
+
+/* === ПОЛЯ ФОРМЫ === */
+/* .subscribe-form .email {}         /* Блок поля: display: flex, flex-direction: column, gap: 8px */ */
+/* .subscribe-form .email label {}   /* Label: цвет #FFFFFF, font-size: 0.9rem */ */
+/* .subscribe-form .email input {}   /* Input: border-radius: 10px, padding: 12px, border: 1px solid #333, фон #FFFFFF, текст #000, placeholder #888, transition */ */
+/* .subscribe-form .email input:focus {} /* Фокус: border-color: #000 или box-shadow: 0 0 0 3px #092A56, outline: none */ */
+/* .subscribe-form .email input::placeholder {} /* Цвет placeholder: #888888 */ */
+
+/* .subscribe-form .fio {}           /* Аналогично .email */ */
+/* .subscribe-form .fio label {} */
+/* .subscribe-form .fio input {} */
+/* .subscribe-form .fio input:focus {} */
+
+/* .subscribe-form .social {}        /* Аналогично */ */
+/* .subscribe-form .social label {} */
+/* .subscribe-form .social input {} */
+/* .subscribe-form .social input:focus {} */
+
+/* .subscribe-form .login {}         /* Аналогично */ */
+/* .subscribe-form .login label {} */
+/* .subscribe-form .login input {} */
+/* .subscribe-form .login input:focus {} */
+
+/* .subscribe-form .password {}      /* Аналогично */ */
+/* .subscribe-form .password label {} */
+/* .subscribe-form .password input {} */
+/* .subscribe-form .password input:focus {} */
+
+/* === КНОПКА ФОРМЫ === */
+/* .subscribe-form .buttons {}       /* Контейнер кнопки: display: flex, justify-content: center, margin-top: 24px */ */
+/* .subscribe-form .buttons button {} /* Кнопка: border-radius: 50px, padding: 14px 40px, фон #2D4B72, цвет #FFFFFF, border: none, font-size: 1rem, cursor: pointer, transition */ */
+/* .subscribe-form .buttons button:hover {} /* Hover: фон #DA4A4A или тень #2D4B72, transform: scale(1.03) */ */
+/* .subscribe-form .buttons button:active {} /* Active: фон #1a2a4a */ */
+/* .subscribe-form .buttons button:focus {} /* Focus: outline: none, box-shadow: 0 0 0 3px #092A56 */ */
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+/* footer {}                /* Фон #101018, padding-top, цвет текста #CCCCCC */ */
+/* footer .container {}     /* Центрирование, max-width */ */
+/* footer h2 {}             /* Заголовок: цвет #FFFFFF, margin-bottom: 24px */ */
+
+/* .footer-links {}         /* Grid/Flex: grid-template-columns: 1fr 1fr или flex-wrap, gap: 32px */ */
+
+/* .footer-links .map {}    /* Контейнер карты: border-radius: 20px, overflow: hidden, box-shadow */ */
+/* .footer-links .map img {} /* Изображение: width: 100%, display: block, transition */ */
+/* .footer-links .map img:hover {} /* Hover: transform: scale(1.02), тень #2D4B72 */ */
+
+/* .footer-links .contacts-and-social {} /* Flex-контейнер: flex-direction: column, gap: 24px */ */
+
+/* === КОНТАКТЫ === */
+/* .footer-links .contacts-and-social .contacts {} /* Блок контактов */ */
+/* .footer-links .contacts-and-social .contacts h3 {} /* Заголовок "Контакты": цвет #FFFFFF, margin-bottom */ */
+/* .footer-links .contacts-and-social .contacts a {} /* Ссылки: цвет #CCCCCC, text-decoration: none, transition */ */
+/* .footer-links .contacts-and-social .contacts a:hover {} /* Hover: цвет #DA4A4A, text-decoration: underline */ */
+
+/* === СОЦСЕТИ === */
+/* .footer-links .contacts-and-social .social {} /* Блок соцсетей */ */
+/* .footer-links .contacts-and-social .social h3 {} /* Заголовок: цвет #FFFFFF */ */
+/* .footer-links .contacts-and-social .social .social-links {} /* Flex: gap: 16px, justify-content: flex-start */ */
+/* .footer-links .contacts-and-social .social .social-links a {} /* Ссылка-иконка: display: flex, align-items: center, justify-content: center, width: 40px, height: 40px, border-radius: 50%, фон #2D4B72, цвет текста #FFFFFF, transition */ */
+/* .footer-links .contacts-and-social .social .social-links a:hover {} /* Hover: фон #DA4A4A, тень #2D4B72, transform: scale(1.1) */ */
+
+/* === НИЖНЯЯ ПОДВАЛЬНАЯ СТРОКА === */
+/* footer > div:last-child {} /* Блок с копирайтом: text-align: center, padding-top: 24px, border-top: 1px solid #333 */ */
+/* footer > div:last-child p {} /* Текст DragonZ: цвет #FFFFFF */ */
+/* footer > div:last-child p span {} /* Буква Z: цвет #DA4A4A */ */
+/* footer > div:last-child span {} /* Символ ™: цвет #888, font-size: 0.8rem */ */
